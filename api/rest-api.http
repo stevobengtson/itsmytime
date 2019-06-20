@@ -1,0 +1,15 @@
+### Test Hello World
+
+GET http://localhost:3000 HTTP/1.1
+Content-Type: application/json
+
+### Get the authorize token
+
+GET http://localhost:3000/auth/token HTTP/1.1
+Content-Type: application/json
+
+### Test a guarded route
+
+GET http://localhost:3000/auth/data HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZW1haWwuY29tIiwiaWF0IjoxNTYxMDEyNzA3LCJleHAiOjE1NjEwMTYzMDd9.ni3B0wHhYK_9fy0o9uJ-w6WHfcFP7KmMR8R85yD9Bck
