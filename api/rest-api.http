@@ -3,10 +3,27 @@
 GET http://localhost:3000 HTTP/1.1
 Content-Type: application/json
 
-### Get the authorize token
+### Login a user
 
-GET http://localhost:3000/auth/token HTTP/1.1
+POST http://localhost:3000/auth/login HTTP/1.1
 Content-Type: application/json
+
+{
+  "email": "test.user@test.com",
+  "password": "t3stus3r"
+}
+
+### Register a user
+
+POST http://localhost:3000/auth/register HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Test User",
+  "email": "test.user@test.com",
+  "password": "t3stus3r",
+  "confirmPassword": "t3stus3r"
+}
 
 ### Test a guarded route
 
